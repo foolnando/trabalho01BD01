@@ -1,0 +1,16 @@
+version: "3.3"
+
+services:
+  nabson_fernando_marcos:
+    container_name: tp1_nabson_fernando_marcos
+    build:
+        context: .
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: pass
+      POSTGRES_USER: nabson
+      POSTGRES_DB: productsdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/:/tp1_data/
